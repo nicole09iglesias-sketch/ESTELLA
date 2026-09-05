@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estella ✨</title>
+
+  <title>STELLA ✦</title>
 
   <style>
     * {
@@ -13,364 +14,528 @@
     }
 
     body {
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: Georgia, "Times New Roman", serif;
       background: #fff8fc;
       color: #4b3544;
+      padding-bottom: 85px;
     }
+
+    /* ENCABEZADO */
 
     header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 45px 25px 30px;
+      background: linear-gradient(
+        135deg,
+        #fff8fc,
+        #f7e4f1,
+        #eee3fa
+      );
+      border-radius: 0 0 35px 35px;
+    }
+
+    .logo {
       text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #fff8fc, #f7e4f1, #eee3fa);
-    }
-
-    .estrella {
-      font-size: 55px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 65px;
-      letter-spacing: 5px;
       color: #8d5b78;
-      margin-bottom: 15px;
+      font-size: 30px;
+      letter-spacing: 5px;
+      margin-bottom: 35px;
     }
 
-    .subtitulo {
-      font-size: 20px;
-      max-width: 600px;
-      line-height: 1.7;
+    .saludo {
+      font-size: 17px;
       color: #72566a;
+      margin-bottom: 8px;
     }
 
-    .boton {
-      margin-top: 35px;
-      padding: 14px 30px;
-      border-radius: 30px;
-      background: #9d6d8b;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      transition: 0.3s;
+    header h1 {
+      font-size: 38px;
+      color: #6f4660;
+      line-height: 1.15;
+      margin-bottom: 12px;
     }
 
-    .boton:hover {
-      background: #76506a;
-      transform: scale(1.05);
+    .frase {
+      font-size: 17px;
+      color: #806779;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+
+    /* CONTENIDO */
+
+    main {
+      max-width: 900px;
+      margin: auto;
     }
 
     section {
-      padding: 80px 25px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: center;
+      padding: 35px 20px 10px;
     }
 
-    h2 {
-      font-size: 35px;
-      color: #8d5b78;
-      margin-bottom: 25px;
-    }
-
-    .texto {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #634f5b;
-    }
-
-    .tarjetas {
+    .titulo-seccion {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 40px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
     }
 
-    .tarjeta {
-      width: 280px;
-      padding: 30px;
+    .titulo-seccion h2 {
+      font-size: 24px;
+      color: #754e68;
+    }
+
+    .ver {
+      color: #9d6d8b;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+
+    /* CONTINUAR */
+
+    .continuar {
+      background: white;
+      border-radius: 25px;
+      padding: 22px;
+      box-shadow: 0 8px 25px rgba(120, 80, 110, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .portada {
+      width: 75px;
+      height: 75px;
+      border-radius: 18px;
+      background: linear-gradient(
+        135deg,
+        #dcb9d0,
+        #eee3fa
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .contenido-audio {
+      flex: 1;
+    }
+
+    .contenido-audio small {
+      color: #9d6d8b;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .contenido-audio h3 {
+      color: #5d4052;
+      margin: 5px 0;
+      font-size: 18px;
+    }
+
+    .contenido-audio p {
+      color: #806779;
+      font-size: 13px;
+    }
+
+    .play {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: #9d6d8b;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+    }
+
+    .categoria {
+      border: none;
+      min-height: 105px;
+      border-radius: 22px;
+      padding: 20px;
+      text-align: left;
+      cursor: pointer;
+      background: white;
+      box-shadow: 0 6px 20px rgba(120, 80, 110, 0.09);
+      transition: 0.2s;
+    }
+
+    .categoria:hover {
+      transform: translateY(-3px);
+    }
+
+    .categoria span {
+      font-size: 27px;
+    }
+
+    .categoria h3 {
+      margin-top: 10px;
+      color: #76506a;
+      font-size: 17px;
+    }
+
+
+    /* FAVORITAS */
+
+    .favoritas {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .favorita {
+      min-width: 145px;
       background: white;
       border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(120, 80, 110, 0.12);
+      padding: 15px;
+      box-shadow: 0 6px 20px rgba(120, 80, 110, 0.09);
     }
 
-    .tarjeta span {
+    .favorita-img {
+      height: 115px;
+      border-radius: 15px;
+      background: linear-gradient(
+        135deg,
+        #f1dce9,
+        #e7def4
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 35px;
+      margin-bottom: 12px;
     }
 
-    .tarjeta h3 {
-      margin: 15px 0 10px;
+    .favorita h3 {
+      font-size: 15px;
+      color: #68475b;
+    }
+
+    .favorita p {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #927687;
+    }
+
+
+    /* EXPLORAR */
+
+    .explorar {
+      background: linear-gradient(
+        135deg,
+        #f7e4f1,
+        #eee3fa
+      );
+      border-radius: 28px;
+      padding: 25px;
+    }
+
+    .explorar p {
+      color: #72566a;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .explorar-boton {
+      display: inline-block;
+      padding: 11px 20px;
+      border-radius: 25px;
+      background: #9d6d8b;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+
+    /* BARRA INFERIOR */
+
+    .navegacion {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      background: rgba(255, 248, 252, 0.96);
+      border-top: 1px solid #ead9e5;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: #927687;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    .nav-item span {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+
+    .nav-item.activo {
       color: #8d5b78;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #eee3fa;
-      color: #6d5264;
-    }
+
+    /* CELULAR */
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 45px;
+
+      header {
+        padding-top: 35px;
       }
 
-      .subtitulo {
-        font-size: 17px;
+      header h1 {
+        font-size: 34px;
       }
+
+      .logo {
+        font-size: 26px;
+      }
+
+      section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
     }
   </style>
 </head>
 
+
 <body>
 
+  <!-- INICIO -->
+
   <header>
-    <div class="estrella">✦</div>
 
-    <h1>ESTELLA</h1>
+    <div class="logo">
+      ✦ STELLA
+    </div>
 
-    <p class="subtitulo">
-      Un pequeño espacio creado para convertir ideas,
-      sueños y momentos especiales en algo extraordinario.
+    <p class="saludo">
+      Bienvenida a tu espacio
     </p>
 
-    <a href="#conoceme" class="boton">Conóceme ✨</a>
+    <h1>
+      ¿Qué quieres<br>
+      escuchar hoy?
+    </h1>
+
+    <p class="frase">
+      Música, historias e ideas para escuchar,
+      descubrir y pensar.
+    </p>
+
   </header>
 
-  <section id="conoceme">
-    <h2>Bienvenida a Estella</h2>
 
-    <p class="texto">
-      Este es el comienzo de algo bonito.
-      Una página creada con personalidad, delicadeza
-      y un poquito de magia.
-    </p>
+  <main>
 
-    <div class="tarjetas">
+    <!-- CONTINUAR ESCUCHANDO -->
 
-      <div class="tarjeta">
-        <span>🌙</span>
-        <h3>Elegancia</h3>
-        <p>
-          Detalles suaves, femeninos y con un estilo especial.
-        </p>
-      </div>
-
-      <div class="tarjeta">
-        <span>✨</span>
-        <h3>Creatividad</h3>
-        <p>
-          Ideas que pueden convertirse en experiencias únicas.
-        </p>
-      </div>
-
-      <div class="tarjeta">
-        <span>🌷</span>
-        <h3>Esencia</h3>
-        <p>
-          Un espacio que busca sentirse auténtico y diferente.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    Hecho con ✨ y un poquito de magia.
-  </footer>
-      <h2>Un poquito de ESTELLA ✨</h2>
-    <p class="texto">
-      Porque cada detalle cuenta y cada idea puede convertirse
-      en algo especial.
-    </p>
-    <div class="tarjetas">
-      <div class="tarjeta">
-        <span>💫</span>
-        <h3>Inspiración</h3>
-        <p>
-          Ideas creadas para darle un toque especial
-          a cada momento.
-        </p>
-      </div>
-      <div class="tarjeta">
-        <span>💗</span>
-        <h3>Detalles</h3>
-        <p>
-          Pequeñas cosas que hacen que una experiencia
-          sea mucho más memorable.
-        </p>
-      </div>
-      <div class="tarjeta">
-        <span>⭐</span>
-        <h3>Tu espacio</h3>
-        <p>
-          Un lugar para descubrir, imaginar y dejar
-          que tu propia esencia brille.
-        </p>
-      </div>
-    </div>
-  </section>
     <section>
-    <h2>Lo que ofrecemos ✨</h2>
 
-    <p class="texto">
-      Descubre nuestras opciones y encuentra aquello que
-      estás buscando.
-    </p>
-
-    <div class="tarjetas">
-
-      <div class="tarjeta">
-        <span>🎁</span>
-        <h3>Detalles especiales</h3>
-        <p>
-          Opciones pensadas para regalar y sorprender
-          en momentos importantes.
-        </p>
-        <a href="#contacto" class="boton">Ver más
-  <!-- CONTENIDO PRINCIPAL DE STELLA -->
-
-  <section id="escuchar">
-    <h2>¿Qué quieres escuchar hoy? ✨</h2>
-
-    <p class="texto">
-      Este es tu espacio para escuchar, descubrir y pensar.
-    </p>
-
-    <div class="tarjetas">
-
-      <div class="tarjeta">
-        <span>▶️</span>
-        <h3>Continuar escuchando</h3>
-        <p>
-          Retoma lo que estabas escuchando exactamente donde lo dejaste.
-        </p>
+      <div class="titulo-seccion">
+        <h2>Continúa escuchando</h2>
+        <a href="#" class="ver">Ver todo</a>
       </div>
 
-      <div class="tarjeta">
-        <span>❤️</span>
-        <h3>Tus favoritas</h3>
-        <p>
-          Todo aquello que guardaste porque simplemente te encantó.
-        </p>
+      <div class="continuar">
+
+        <div class="portada">
+          🎧
+        </div>
+
+        <div class="contenido-audio">
+
+          <small>ÚLTIMO ESCUCHADO</small>
+
+          <h3>
+            Tu contenido aparecerá aquí
+          </h3>
+
+          <p>
+            Continúa desde donde lo dejaste.
+          </p>
+
+        </div>
+
+        <button class="play">
+          ▶
+        </button>
+
       </div>
 
-      <div class="tarjeta">
-        <span>🎵</span>
-        <h3>Música</h3>
-        <p>
-          Encuentra canciones para cada momento y estado de ánimo.
-        </p>
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+
+    <section>
+
+      <div class="titulo-seccion">
+        <h2>Explora por categoría</h2>
       </div>
 
-      <div class="tarjeta">
-        <span>📖</span>
-        <h3>Audiolibros</h3>
-        <p>
-          Historias y libros para escuchar mientras haces otras cosas.
-        </p>
+      <div class="categorias">
+
+        <button class="categoria">
+          <span>🎵</span>
+          <h3>Música</h3>
+        </button>
+
+        <button class="categoria">
+          <span>📖</span>
+          <h3>Audiolibros</h3>
+        </button>
+
+        <button class="categoria">
+          <span>🎙️</span>
+          <h3>Podcasts</h3>
+        </button>
+
+        <button class="categoria">
+          <span>🧠</span>
+          <h3>Ciencia</h3>
+        </button>
+
+        <button class="categoria">
+          <span>🏛️</span>
+          <h3>Filosofía</h3>
+        </button>
+
+        <button class="categoria">
+          <span>❤️</span>
+          <h3>Favoritas</h3>
+        </button>
+
       </div>
 
-      <div class="tarjeta">
-        <span>🎙️</span>
-        <h3>Podcasts</h3>
-        <p>
-          Conversaciones, historias y nuevas ideas para descubrir.
-        </p>
+    </section>
+
+
+    <!-- FAVORITAS -->
+
+    <section>
+
+      <div class="titulo-seccion">
+        <h2>Tus favoritas ❤️</h2>
+        <a href="#" class="ver">Ver todo</a>
       </div>
 
-      <div class="tarjeta">
-        <span>🧠</span>
-        <h3>Ciencia</h3>
-        <p>
-          Aprende, cuestiona y descubre cómo funciona el mundo.
-        </p>
+      <div class="favoritas">
+
+        <div class="favorita">
+
+          <div class="favorita-img">
+            ♡
+          </div>
+
+          <h3>
+            Aún no tienes favoritas
+          </h3>
+
+          <p>
+            Guarda contenido para verlo aquí.
+          </p>
+
+        </div>
+
+
+        <div class="favorita">
+
+          <div class="favorita-img">
+            ✦
+          </div>
+
+          <h3>
+            Tu biblioteca
+          </h3>
+
+          <p>
+            Todo lo que quieras conservar.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="tarjeta">
-        <span>🏛️</span>
-        <h3>Filosofía</h3>
+    </section>
+
+
+    <!-- DESCUBRIR -->
+
+    <section>
+
+      <div class="explorar">
+
+        <div class="titulo-seccion">
+          <h2>Descubre algo nuevo 🔎</h2>
+        </div>
+
         <p>
-          Ideas para pensar, reflexionar y mirar las cosas de otra manera.
+          Explora ciencia, filosofía, podcasts,
+          audiolibros y música que quizá todavía
+          no conoces.
         </p>
+
+        <a href="#" class="explorar-boton">
+          Explorar STELLA
+        </a>
+
       </div>
 
-    </div>
-  </section>
+    </section>
+
+  </main>
 
 
-  <!-- EXPLORAR -->
+  <!-- NAVEGACIÓN -->
 
-  <section id="explorar">
-    <h2>Explorar 🔎</h2>
+  <nav class="navegacion">
 
-    <p class="texto">
-      Descubre nuevos contenidos según tus intereses.
-    </p>
+    <a href="#" class="nav-item activo">
+      <span>⌂</span>
+      Inicio
+    </a>
 
-    <div class="tarjetas">
+    <a href="#" class="nav-item">
+      <span>⌕</span>
+      Explorar
+    </a>
 
-      <div class="tarjeta">
-        <span>🔬</span>
-        <h3>Para aprender</h3>
-        <p>
-          Ciencia, historia, curiosidades y conocimiento.
-        </p>
-      </div>
+    <a href="#" class="nav-item">
+      <span>♡</span>
+      Biblioteca
+    </a>
 
-      <div class="tarjeta">
-        <span>💭</span>
-        <h3>Para pensar</h3>
-        <p>
-          Filosofía, conversaciones y preguntas interesantes.
-        </p>
-      </div>
+    <a href="#" class="nav-item">
+      <span>⚙</span>
+      Ajustes
+    </a>
 
-      <div class="tarjeta">
-        <span>🌙</span>
-        <h3>Para relajarte</h3>
-        <p>
-          Música, historias y podcasts para desconectar.
-        </p>
-      </div>
-
-    </div>
-  </section>
+  </nav>
 
 
-  <!-- MI BIBLIOTECA -->
-
-  <section id="biblioteca">
-    <h2>Mi biblioteca ❤️</h2>
-
-    <p class="texto">
-      Aquí aparecerá todo el contenido que hayas guardado.
-    </p>
-
-    <div class="tarjetas">
-
-      <div class="tarjeta">
-        <span>🎧</span>
-        <h3>Guardados</h3>
-        <p>
-          Tus canciones, podcasts y audiolibros favoritos.
-        </p>
-      </div>
-
-      <div class="tarjeta">
-        <span>📚</span>
-        <h3>Mis colecciones</h3>
-        <p>
-          Organiza tu contenido como quieras.
-        </p>
-      </div>
-
-    </div>
-  </section>
 </body>
 </html>
+
