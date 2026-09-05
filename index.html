@@ -923,7 +923,38 @@
     });
 
   </script>
+<script>
+function abrirReproductor(titulo, autor) {
+  const reproductor = document.getElementById("reproductor");
 
+  document.getElementById("player-titulo").textContent =
+    titulo || "Una nueva historia";
+
+  document.getElementById("player-autor").textContent =
+    autor || "STELLA";
+
+  document.querySelectorAll("main > section").forEach(section => {
+    section.style.display = "none";
+  });
+
+  reproductor.style.display = "flex";
+}
+
+function cerrarReproductor() {
+  document.getElementById("reproductor").style.display = "none";
+  mostrarPantalla("inicio");
+}
+
+function alternarPlay() {
+  const boton = document.querySelector(".play-button");
+
+  if (boton.textContent === "▶") {
+    boton.textContent = "❚❚";
+  } else {
+    boton.textContent = "▶";
+  }
+}
+</script>
 </body>
 </html>
 
