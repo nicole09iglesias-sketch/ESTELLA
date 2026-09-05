@@ -507,7 +507,121 @@
     </section>
 
   </main>
+    <!-- PANTALLA EXPLORAR -->
 
+    <section id="pantalla-explorar" style="display:none;">
+
+      <div class="titulo-seccion">
+        <h2>Explorar 🔎</h2>
+      </div>
+
+      <p class="frase">
+        Descubre algo nuevo para escuchar, aprender y pensar.
+      </p>
+
+      <div class="explorar">
+
+        <h2>Para ti ✨</h2>
+
+        <p>
+          Contenido seleccionado para despertar tu curiosidad.
+        </p>
+
+        <a href="#" class="explorar-boton">
+          Descubrir contenido
+        </a>
+
+      </div>
+
+      <div class="titulo-seccion">
+        <h2>Ciencia 🧠</h2>
+      </div>
+
+      <div class="titulo-seccion">
+        <h2>Filosofía 🏛️</h2>
+      </div>
+
+      <div class="titulo-seccion">
+        <h2>Podcasts 🎙️</h2>
+      </div>
+
+    </section>
+
+
+    <!-- PANTALLA BIBLIOTECA -->
+
+    <section id="pantalla-biblioteca" style="display:none;">
+
+      <div class="titulo-seccion">
+        <h2>Mi biblioteca ♡</h2>
+      </div>
+
+      <p class="frase">
+        Todo lo que guardes en STELLA aparecerá aquí.
+      </p>
+
+      <div class="continuar">
+
+        <div class="portada">
+          ♡
+        </div>
+
+        <div class="contenido-audio">
+
+          <small>TU BIBLIOTECA</small>
+
+          <h3>
+            Todavía está vacía
+          </h3>
+
+          <p>
+            Guarda tus contenidos favoritos para encontrarlos aquí.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PANTALLA AJUSTES -->
+
+    <section id="pantalla-ajustes" style="display:none;">
+
+      <div class="titulo-seccion">
+        <h2>Ajustes ⚙️</h2>
+      </div>
+
+      <div class="tarjetas">
+
+        <div class="tarjeta">
+          <span>👤</span>
+          <h3>Mi perfil</h3>
+          <p>
+            Tu información personal dentro de STELLA.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <span>🔔</span>
+          <h3>Notificaciones</h3>
+          <p>
+            Controla las notificaciones de la aplicación.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <span>🌙</span>
+          <h3>Apariencia</h3>
+          <p>
+            Personaliza cómo quieres ver STELLA.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
 
   <!-- NAVEGACIÓN -->
 
@@ -534,7 +648,128 @@
     </a>
 
   </nav>
+  <script>
 
+    function mostrarPantalla(pantalla) {
+
+      const inicio = document.querySelector("header");
+      const contenido = document.querySelector("main");
+      const explorar = document.getElementById("pantalla-explorar");
+      const biblioteca = document.getElementById("pantalla-biblioteca");
+      const ajustes = document.getElementById("pantalla-ajustes");
+
+      /* Ocultar pantallas especiales */
+
+      explorar.style.display = "none";
+      biblioteca.style.display = "none";
+      ajustes.style.display = "none";
+
+      /* Mostrar inicio */
+
+      if (pantalla === "inicio") {
+
+        inicio.style.display = "block";
+
+        contenido.querySelectorAll("section").forEach(section => {
+          section.style.display = "block";
+        });
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+
+      /* Mostrar explorar */
+
+      if (pantalla === "explorar") {
+
+        inicio.style.display = "none";
+
+        contenido.querySelectorAll("section").forEach(section => {
+          section.style.display = "none";
+        });
+
+        explorar.style.display = "block";
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+
+      /* Mostrar biblioteca */
+
+      if (pantalla === "biblioteca") {
+
+        inicio.style.display = "none";
+
+        contenido.querySelectorAll("section").forEach(section => {
+          section.style.display = "none";
+        });
+
+        biblioteca.style.display = "block";
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+
+      /* Mostrar ajustes */
+
+      if (pantalla === "ajustes") {
+
+        inicio.style.display = "none";
+
+        contenido.querySelectorAll("section").forEach(section => {
+          section.style.display = "none";
+        });
+
+        ajustes.style.display = "block";
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      }
+
+    }
+
+
+    /* BOTONES DE LA BARRA INFERIOR */
+
+    document.querySelectorAll(".nav-item").forEach((boton, indice) => {
+
+      boton.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        if (indice === 0) {
+          mostrarPantalla("inicio");
+        }
+
+        if (indice === 1) {
+          mostrarPantalla("explorar");
+        }
+
+        if (indice === 2) {
+          mostrarPantalla("biblioteca");
+        }
+
+        if (indice === 3) {
+          mostrarPantalla("ajustes");
+        }
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
