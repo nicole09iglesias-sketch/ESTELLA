@@ -315,8 +315,126 @@
         padding-left: 18px;
         padding-right: 18px;
       }
+/* 🎧 REPRODUCTOR STELLA */
 
+#reproductor {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 25px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(141,91,120,0.15);
+  text-align: center;
+  position: relative;
+}
+
+.cerrar-player {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  border: none;
+  background: none;
+  font-size: 28px;
+  color: #8d5b78;
+  cursor: pointer;
+}
+
+.player-cover {
+  width: 230px;
+  height: 230px;
+  margin: 10px auto 25px;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#f7e4f1,#eee3fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+  box-shadow: 0 10px 25px rgba(141,91,120,0.15);
+}
+
+.player-tipo {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #9d6d8b;
+  margin-bottom: 8px;
+}
+
+#player-titulo {
+  color: #8d5b78;
+  margin: 5px 0;
+  font-size: 25px;
+}
+
+#player-autor {
+  color: #72566a;
+  margin-bottom: 30px;
+}
+
+.barra-tiempo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #72566a;
+}
+
+.barra {
+  flex: 1;
+  height: 5px;
+  background: #eee3fa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progreso {
+  width: 35%;
+  height: 100%;
+  background: #9d6d8b;
+  border-radius: 10px;
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin: 30px 0 20px;
+}
+
+.controles button,
+.player-extra button {
+  border: none;
+  background: none;
+  color: #72566a;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.controles .play-button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #9d6d8b;
+  color: white;
+  font-size: 25px;
+  box-shadow: 0 8px 20px rgba(157,109,139,0.3);
+}
+
+.player-extra {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
     }
+    
   </style>
 </head>
 
@@ -505,7 +623,42 @@
       </div>
 
     </section>
+<section id="reproductor" style="display:none;">
+  <div class="player-box">
 
+    <button class="cerrar-player" onclick="cerrarReproductor()">×</button>
+
+    <div class="player-cover">
+      🎧
+    </div>
+
+    <p class="player-tipo">AHORA ESCUCHANDO</p>
+
+    <h2 id="player-titulo">Una nueva historia</h2>
+    <p id="player-autor">STELLA</p>
+
+    <div class="barra-tiempo">
+      <span>0:00</span>
+      <div class="barra">
+        <div class="progreso"></div>
+      </div>
+      <span>3:42</span>
+    </div>
+
+    <div class="controles">
+      <button>⏮</button>
+      <button class="play-button" onclick="alternarPlay()">▶</button>
+      <button>⏭</button>
+    </div>
+
+    <div class="player-extra">
+      <button>🔀</button>
+      <button>♡</button>
+      <button>🔁</button>
+    </div>
+
+  </div>
+</section>
   </main>
     <!-- PANTALLA EXPLORAR -->
 
