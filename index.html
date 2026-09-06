@@ -1047,6 +1047,19 @@ function alternarPlay() {
   }
 }
 </script>
+ <script>
+function guardarFavorito(nombre) {
+  let favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
+
+  if (!favoritos.includes(nombre)) {
+    favoritos.push(nombre);
+    localStorage.setItem("stellaFavoritos", JSON.stringify(favoritos));
+    alert("♡ Guardado en tu biblioteca");
+  } else {
+    alert("♡ Ya está en tu biblioteca");
+  }
+}
+</script>
 </body>
 </html>
 
