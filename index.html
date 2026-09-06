@@ -1011,6 +1011,57 @@ function guardarFavorito(nombre) {
   }
 }
 </script>
+function mostrarFavoritos() {
+  const lista = document.getElementById("lista-favoritos");
+  if (!lista) return;
+
+  const favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
+
+  lista.innerHTML = "";
+
+  if (favoritos.length === 0) {
+    lista.innerHTML = `
+      <div class="favorita">
+        <div class="favorita-img">
+          ♡
+        </div>
+
+        <h3>
+          Aún no tienes favoritas
+        </h3>
+
+        <p>
+          Guarda contenido para verlo aquí.
+        </p>
+      </div>
+    `;
+    return;
+  }
+
+  favoritos.forEach(function(nombre) {
+    lista.innerHTML += `
+      <div class="favorita"
+           onclick="abrirReproductor('${nombre.replace(/'/g, "\\'")}', 'STELLA')">
+
+        <div class="favorita-img">
+          🎧
+        </div>
+
+        <h3>
+          ${nombre}
+        </h3>
+
+        <p>
+          Guardado en tu biblioteca.
+        </p>
+
+      </div>
+    `;
+  });
+}
+
+mostrarFavoritos();
+</script>
 </body>
 </html>
 
