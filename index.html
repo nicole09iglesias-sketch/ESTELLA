@@ -998,7 +998,6 @@ function alternarPlay() {
   }
 }
 </script>
- <script>
 function guardarFavorito(nombre) {
   let favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
 
@@ -1011,6 +1010,21 @@ function guardarFavorito(nombre) {
   }
 }
 </script>
+ function guardarFavorito(nombre) {
+  let favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
+
+  if (!favoritos.includes(nombre)) {
+    favoritos.push(nombre);
+    localStorage.setItem("stellaFavoritos", JSON.stringify(favoritos));
+
+    mostrarFavoritos();
+
+    alert("♡ Guardado en tu biblioteca");
+  } else {
+    alert("♡ Ya está en tu biblioteca");
+  }
+}
+<script>
 function mostrarFavoritos() {
   const lista = document.getElementById("lista-favoritos");
   if (!lista) return;
