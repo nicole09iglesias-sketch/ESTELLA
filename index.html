@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+bi <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -699,40 +699,73 @@
 
 
     <!-- PANTALLA BIBLIOTECA -->
+  <section id="pantalla-biblioteca" style="display:none;">
 
-    <section id="pantalla-biblioteca" style="display:none;">
+  <div class="titulo-seccion">
+    <h2>Mi biblioteca ♡</h2>
+  </div>
 
-      <div class="titulo-seccion">
-        <h2>Mi biblioteca ♡</h2>
+  <p class="frase">
+    Todo lo que guardes en STELLA aparecerá aquí.
+  </p>
+
+  <div class="favoritas">
+
+    <div class="favorita" onclick="abrirReproductor('Mi contenido favorito', 'STELLA')">
+
+      <div class="favorita-img">
+        🎧
       </div>
 
-      <p class="frase">
-        Todo lo que guardes en STELLA aparecerá aquí.
+      <h3>
+        Mi contenido favorito
+      </h3>
+
+      <p>
+        Música, historias e ideas que quieras volver a escuchar.
       </p>
 
-      <div class="continuar">
+    </div>
 
-        <div class="portada">
-          ♡
-        </div>
 
-        <div class="contenido-audio">
+    <div class="favorita" onclick="abrirReproductor('Una nueva historia', 'STELLA')">
 
-          <small>TU BIBLIOTECA</small>
-
-          <h3>
-            Todavía está vacía
-          </h3>
-
-          <p>
-            Guarda tus contenidos favoritos para encontrarlos aquí.
-          </p>
-
-        </div>
-
+      <div class="favorita-img">
+        ✦
       </div>
 
-    </section>
+      <h3>
+        Una nueva historia
+      </h3>
+
+      <p>
+        Tu próximo momento para escuchar y pensar.
+      </p>
+
+    </div>
+
+
+    <div class="favorita" onclick="abrirReproductor('Pensamientos', 'STELLA')">
+
+      <div class="favorita-img">
+        🌙
+      </div>
+
+      <h3>
+        Pensamientos
+      </h3>
+
+      <p>
+        Un espacio para ideas, ciencia y filosofía.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+    
 
 
     <!-- PANTALLA AJUSTES -->
