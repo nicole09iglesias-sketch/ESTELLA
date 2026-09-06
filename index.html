@@ -996,21 +996,11 @@ function alternarPlay() {
   } else {
     boton.textContent = "▶";
   }
-}
-</script>
-function guardarFavorito(nombre) {
-  let favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
 
-  if (!favoritos.includes(nombre)) {
-    favoritos.push(nombre);
-    localStorage.setItem("stellaFavoritos", JSON.stringify(favoritos));
-    alert("♡ Guardado en tu biblioteca");
-  } else {
-    alert("♡ Ya está en tu biblioteca");
-  }
 }
-</script>
- function guardarFavorito(nombre) {
+<script>
+
+function guardarFavorito(nombre) {
   let favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
 
   if (!favoritos.includes(nombre)) {
@@ -1024,18 +1014,23 @@ function guardarFavorito(nombre) {
     alert("♡ Ya está en tu biblioteca");
   }
 }
-<script>
+
+
 function mostrarFavoritos() {
   const lista = document.getElementById("lista-favoritos");
+
   if (!lista) return;
 
-  const favoritos = JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
+  const favoritos =
+    JSON.parse(localStorage.getItem("stellaFavoritos")) || [];
 
   lista.innerHTML = "";
 
   if (favoritos.length === 0) {
+
     lista.innerHTML = `
       <div class="favorita">
+
         <div class="favorita-img">
           ♡
         </div>
@@ -1047,12 +1042,15 @@ function mostrarFavoritos() {
         <p>
           Guarda contenido para verlo aquí.
         </p>
+
       </div>
     `;
+
     return;
   }
 
   favoritos.forEach(function(nombre) {
+
     lista.innerHTML += `
       <div class="favorita"
            onclick="abrirReproductor('${nombre.replace(/'/g, "\\'")}', 'STELLA')">
@@ -1071,10 +1069,14 @@ function mostrarFavoritos() {
 
       </div>
     `;
+
   });
+
 }
 
+
 mostrarFavoritos();
+
 </script>
 </body>
 </html>
